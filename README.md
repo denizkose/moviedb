@@ -17,7 +17,7 @@
 
 - [x] Main page
 - [x] Movie & TV Show pages
-- [ ] Search with filters (in progress now)
+- [ ] __Search with filters (in progress now)__
 - [ ] Authorization (through TMDB API)
 - [ ] Improve security
 - [ ] Refactor code
