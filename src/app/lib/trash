@@ -1,0 +1,82 @@
+<Filter title='Release Year' id='release-year'>
+            <input
+              className='focus:shadow-outline mb-3 w-full appearance-none rounded border border-white px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none'
+              id='release-year'
+              type='number'
+              placeholder='Ex. 1984, 2007, 2024'
+              onChange={(e) =>
+                setDataMovie({ ...dataMovie, year: Number(e.target.value) })
+              }
+            />
+          </Filter>
+          <Filter title='Rating' id='rating'>
+            <input
+              type='range'
+              min={0}
+              max={10}
+              step={0.5}
+              defaultValue={9.0}
+              className='focus:shadow-outline mb-3 w-full appearance-none rounded border border-white px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none'
+              id='rating'
+              onChange={(e) => {
+                setDataMovie({
+                  ...dataMovie,
+                  'vote_average.gte': Number(e.target.value),
+                });
+              }}
+            />
+          </Filter>
+          <Filter
+            title='Certification'
+            id='certification'
+            desc={certificationMeaning}
+          >
+            <select
+              className='focus:shadow-outline mb-3 w-full appearance-none rounded border border-white px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none'
+              id='certification'
+              onChange={(e) => {
+                setSertificationMeaning(
+                  preparedData.certifications.filter(
+                    (c) => c.certification === e.target.value
+                  )[0]?.meaning
+                );
+                setDataMovie({ ...dataMovie, certification: e.target.value });
+              }}
+            >
+              <option value='all'>All</option>
+              {preparedData.certifications.map(c => (
+                <option
+                  key={c.order}
+                  id={String(c.order)}
+                  value={c.certification}
+                >
+                  {c.certification}
+                </option>
+              ))}
+            </select>
+          </Filter>
+          
+         
+          <Filter title='Country' id='country'>
+            <select
+              className='focus:shadow-outline mb-3 w-full appearance-none rounded border border-white px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none'
+              id='country'
+              onChange={(e) =>
+                setDataMovie({
+                  ...dataMovie,
+                  with_origin_country: e.target.value,
+                })
+              }
+            >
+              <option value='all'>All</option>
+              {preparedData.countries.map(c => (
+                <option
+                  key={c.iso_3166_1}
+                  id={c.iso_3166_1}
+                  value={c.iso_3166_1}
+                >
+                  {c.native_name}
+                </option>
+              ))}
+            </select>
+          </Filter>

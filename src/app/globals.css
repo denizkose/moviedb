@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/montserrat.ttf') format('truetype');
+}
+
+#media-carousel {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+#media-carousel::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+.header-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0),
+    rgba(0, 0, 0, 0.995) 6.67%,
+    rgba(0, 0, 0, 0.979) 13.33%,
+    rgba(0, 0, 0, 0.951) 20%,
+    rgba(0, 0, 0, 0.912) 26.67%,
+    rgba(0, 0, 0, 0.861) 33.33%,
+    rgba(0, 0, 0, 0.801) 40%,
+    rgba(0, 0, 0, 0.734) 46.67%,
+    rgba(0, 0, 0, 0.666) 53.33%,
+    rgba(0, 0, 0, 0.599) 60%,
+    rgba(0, 0, 0, 0.539) 66.67%,
+    rgba(0, 0, 0, 0.488) 73.33%,
+    rgba(0, 0, 0, 0.449) 80%,
+    rgba(0, 0, 0, 0.421) 86.67%,
+    rgba(0, 0, 0, 0.405) 93.33%,
+    transparent
+  );
+}
+
+.footer-gradient {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0),
+    rgba(0, 0, 0, 0.995) 6.67%,
+    rgba(0, 0, 0, 0.979) 13.33%,
+    rgba(0, 0, 0, 0.951) 20%,
+    rgba(0, 0, 0, 0.912) 26.67%,
+    rgba(0, 0, 0, 0.861) 33.33%,
+    rgba(0, 0, 0, 0.801) 40%,
+    rgba(0, 0, 0, 0.734) 46.67%,
+    rgba(0, 0, 0, 0.666) 53.33%,
+    rgba(0, 0, 0, 0.599) 60%,
+    rgba(0, 0, 0, 0.539) 66.67%,
+    rgba(0, 0, 0, 0.488) 73.33%,
+    rgba(0, 0, 0, 0.449) 80%,
+    rgba(0, 0, 0, 0.421) 86.67%,
+    rgba(0, 0, 0, 0.405) 93.33%,
+    transparent
+  );
+}
