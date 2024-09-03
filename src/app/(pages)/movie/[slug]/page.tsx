@@ -1,5 +1,5 @@
 import Movie from '@/components/client/movie/Movie';
-import { DB_LOCALE } from '@/lib/utils';
+import { DB_LOCALE } from '@/lib/constants';
 import { tmdb } from '@/tmdb';
 
 export default async function Page({ params }: { params: { slug: string } }) {
