@@ -1,4 +1,4 @@
-# MovieDB (WIP )
+# MovieDB (WIP 🚧)
 
 **MovieDB** - wrapper for TMDB API.
 
@@ -17,7 +17,7 @@
 
 - [x] Main page
 - [x] Movie & TV Show pages
-- [ ] Search (with filters)
+- [ ] Search with filters (in progress now)
 - [ ] Authorization (through TMDB API)
 - [ ] Improve security
 - [ ] Refactor code
